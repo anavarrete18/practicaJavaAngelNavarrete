@@ -1,10 +1,10 @@
 package cat.ilg;
 
 public class ProfessorSubstitut extends Professor{
-    private date dataInici;
-    private date dataFi;
+    private int dataInici;
+    private int dataFi;
 
-    public void assignarSubstitucio(date dataInici, date dataFi){
+    public void assignarSubstitucio(int dataInici, int dataFi){
         this.dataInici=dataInici;
         this.dataFi=dataFi;
     }

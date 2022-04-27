@@ -7,7 +7,7 @@ public class Professor extends Persona {
     public Professor(String nom){
         this.nom=nom;
     }
-    @Override
+
     public void canviarSou(float nouSou) {
         this.sou=nouSou;
     }

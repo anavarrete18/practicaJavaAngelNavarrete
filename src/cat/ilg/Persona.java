@@ -2,8 +2,8 @@ package cat.ilg;
 
 public class Persona {
     //atributs
-    private String dni;
-    private String nom;
+    protected String dni;
+    protected String nom;
 
     //metodes
     public void canviarNom(String nom){
@@ -17,5 +17,7 @@ public class Persona {
     public void assignarDni(String dni){
         this.dni=dni;
     }
-    public void obtenirDades(){}
+    public void obtenirDades(){
+        System.out.println("PERSONA amb nom: " + nom + " i DNI: " + dni);
+    }
 }

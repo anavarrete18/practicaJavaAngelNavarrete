@@ -15,6 +15,8 @@ public class Main {
 	estudiant1.posarNota(7.5);
 	ins.afegirEstudiant(estudiant1);
 
+	profe1.obtenirDades();
+	estudiant1.obtenirDades();
 	ins.imprimirInformacio();
     }
 }
