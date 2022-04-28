@@ -4,12 +4,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Institut {
+    //atributos
     private String nom;
     private List<Professor> listaProfessor= new ArrayList<>();
     private List<Estudiant> listaEstudiant= new ArrayList<>();
-    //constructors
+    //constructores
     public Institut(){}
-    public Institut(String nom){
+
+    //metodos
+    public void canviarNom(String nom){
         this.nom=nom;
     }
     public void afegirProfe(Professor profe){
@@ -19,13 +22,14 @@ public class Institut {
         listaEstudiant.add(estudiant);
     }
     public void imprimirInformacio(){
-        for (int i=0; i<listaEstudiant.size(); i++) {
-            System.out.println(listaEstudiant.get(i).toString());
+        System.out.println("Institut " + nom + ". LLista de persones: ");
+
+        for (Persona professors: listaProfessor){
+            professors.obtenirDades();
         }
-        for (int i=0; i<listaProfessor.size(); i++) {
-            System.out.println(listaProfessor.get(i).toString());
+        for (Persona estudiants: listaEstudiant){
+            estudiants.obtenirDades();
         }
-        System.out.println();
 
     }
 }

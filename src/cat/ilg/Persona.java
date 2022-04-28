@@ -15,9 +15,25 @@ public class Persona {
     }
 
     public void assignarDni(String dni){
-        this.dni=dni;
+        try{
+            if(this.dni != dni){
+                this.dni=dni;
+            }
+        }catch(Exception e){
+            System.out.println("Ya hi ha un dni assignat");
+        }
     }
+
     public void obtenirDades(){
-        System.out.println("PERSONA amb nom: " + nom + " i DNI: " + dni);
+        try{
+            if(nom == null && dni == null){
+                throw new Exception("No hi ha dades sobre la Persona");
+            }
+            else{
+                System.out.println("PERSONA amb nom: " + nom + " i DNI: " + dni);
+            }
+        }catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
     }
 }
