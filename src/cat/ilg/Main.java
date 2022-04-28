@@ -17,7 +17,8 @@ public class Main {
 		profe1.canviarSou(3050);
 		profe1.canviarSou(-60);
 		profe1.canviarSou(2500);
-		ins.afegirProfe(profe1);
+		//ins.afegirProfe(profe1);
+		ins.afegirPersona(profe1);
 
 		ProfessorSubstitut profe2 = new ProfessorSubstitut();
 		profe2.canviarNom("Laura");
@@ -26,7 +27,8 @@ public class Main {
 		Date dataInici = new Date(2021, 11, 1);
 		Date dataFi = new Date(2022, 6, 30);
 		profe2.assignarSubstitucio(dataInici, dataFi);
-		ins.afegirProfe(profe2);
+		//ins.afegirProfe(profe2);
+		ins.afegirPersona(profe2);
 
 		Estudiant estudiant1 = new Estudiant();
 		estudiant1.canviarNom("Joan");
@@ -36,8 +38,8 @@ public class Main {
 		estudiant1.posarNota(14);
 		Estudiant estudiant2 = new Estudiant();
 		estudiant2.obtenirDades();
-
-		ins.afegirEstudiant(estudiant1);
+		//ins.afegirEstudiant(estudiant1);
+		ins.afegirPersona(estudiant1);
 
 		ins.imprimirInformacio();
 
