@@ -36,8 +36,20 @@ public class Main {
 		estudiant1.posarNota(7.5);
 		estudiant1.posarNota(-4);
 		estudiant1.posarNota(14);
+		estudiant1.posarNota(8);
+		estudiant1.posarNota(10);
+		estudiant1.posarNota(3);
 		Estudiant estudiant2 = new Estudiant();
 		estudiant2.obtenirDades();
+		Estudiant estudiant3 = new Estudiant();
+		estudiant3.canviarNom("Angel");
+		estudiant3.assignarDni("12345678A");
+		estudiant3.obtenirDades();
+		estudiant3.posarNota(8);
+		estudiant3.posarNota(9.5);
+		estudiant3.posarNota(7.7);
+		estudiant3.posarNota(4);
+		ins.afegirPersona(estudiant3);
 		//ins.afegirEstudiant(estudiant1);
 		ins.afegirPersona(estudiant1);
 
