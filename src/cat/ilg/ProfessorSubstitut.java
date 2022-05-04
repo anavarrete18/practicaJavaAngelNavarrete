@@ -1,6 +1,5 @@
 package cat.ilg;
 
-import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class ProfessorSubstitut extends Professor{

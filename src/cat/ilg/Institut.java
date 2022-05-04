@@ -26,7 +26,7 @@ public class Institut {
     public void afegirPersona(Persona persona){
         listaPersona.add(persona);
     }
-    public void imprimirInformacio(){
+    public void imprimirInformacio() throws Exception {
         System.out.println("Institut " + nom + ". LLista de persones: ");
     /*
         for (Persona professors: listaProfessor){

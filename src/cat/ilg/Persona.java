@@ -14,26 +14,18 @@ public class Persona {
         return nom;
     }
 
-    public void assignarDni(String dni){
-        try{
-            if(this.dni != dni){
-                this.dni=dni;
-            }
-        }catch(Exception e){
-            System.out.println("Ya hi ha un dni assignat");
+    public void assignarDni(String dni) throws Exception {
+        if(this.dni != dni){
+            this.dni=dni;
         }
     }
 
-    public void obtenirDades(){
-        try{
-            if(nom == null && dni == null){
-                throw new Exception("No hi ha dades sobre la Persona");
-            }
-            else{
-                System.out.println("PERSONA amb nom: " + nom + " i DNI: " + dni);
-            }
-        }catch (Exception e) {
-            System.out.println(e.getMessage());
+    public void obtenirDades() throws Exception {
+        if(nom == null || dni == null){
+            throw new Exception("No hi ha dades sobre la Persona");
+        }
+        else{
+            System.out.println("PERSONA amb nom: " + nom + " i DNI: " + dni);
         }
     }
 }

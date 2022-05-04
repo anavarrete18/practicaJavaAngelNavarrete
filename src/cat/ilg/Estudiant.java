@@ -10,23 +10,18 @@ public class Estudiant extends Persona{
     private double notaMinima;
     private double mitjanaNotes = 0;
 
-    public void posarNota(double nota){
-        try{
+    public void posarNota(double nota) throws Exception {
             if( nota > 10 || nota < 0 ){
                 throw new Exception("La nota ha de ser entre 0 i 10");
             }
             else{
                 notes.add(nota);
             }
-        }catch (Exception e){
-            System.out.println(e.getMessage());
-        }
     }
 
     @Override
-    public void obtenirDades() {
-        try{
-            if(nom == null && dni == null){
+    public void obtenirDades() throws Exception {
+            if(nom == null || dni == null){
                 throw new Exception("No hi ha dades sobre la Persona");
             }
             else{
@@ -49,8 +44,5 @@ public class Estudiant extends Persona{
 
                 System.out.println("PERSONA amb nom: "+ nom + " i dni: " + dni + " (ESTUDIANT amb nota máxima: " + notaMaxima + ", nota minima de: " + notaMinima +" i mitjana de: " + mitjanaNotes + ")");
             }
-        }catch (Exception e) {
-            System.out.println(e.getMessage());
-        }
     }
 }
