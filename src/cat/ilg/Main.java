@@ -1,10 +1,6 @@
 package cat.ilg;
 
-import java.util.Scanner;
-import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.Date;
-import java.util.List;
 
 public class Main {
 	public static void main(String[] args) throws Exception {
@@ -59,39 +55,6 @@ public class Main {
 		}catch(Exception e) {
 			System.out.println(e.getMessage());
 		}
-		/*
-		Scanner input = new Scanner(System.in);
-		System.out.print("Introdueix el número de l’acció que vulguis fer:\n");
-		int numero = input.nextInt();
-		System.out.print("1) Veure la llista d’Instituts\n" +
-				"2) Veure la informació completa d’un Institut\n" +
-				"3) Afegir persona a un Institut\n" +
-				"4) Eliminar un Institut\n" +
-				"5) Crear un Institut\n");
-
-
-
-		switch (numero){
-			case 1:
-				//instutut.imprimirInformacio();
-				break;
-			case 2:
-				System.out.println("Escriu el número de l’Institut que vols consultar\n");
-				Scanner input2 = new Scanner(System.in);
-				break;
-			case 3:
-				break;
-			case 4:
-				break;
-			case 5:
-				System.out.println("Escriu el nom de l’Institut que vols crear:\n");
-				Scanner institut = new Scanner(System.in);
-				Institut institut1 = new Institut();
-				institut1.canviarNom(institut.toString());
-				System.out.println("Institut creat correctament");
-				break;
-		}
-		*/
 	}
 }
 
