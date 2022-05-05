@@ -18,7 +18,7 @@ public class Main {
 			//profe1.assignarDni("12345");
 			//profe1.canviarSou(3050);
 			//profe1.canviarSou(-60);
-			//profe1.canviarSou(2500);
+			profe1.canviarSou(2500);
 			//ins.afegirProfe(profe1);
 			ins.afegirPersona(profe1);
 
@@ -48,20 +48,50 @@ public class Main {
 			Estudiant estudiant3 = new Estudiant();
 			estudiant3.canviarNom("Angel");
 			estudiant3.assignarDni("12345678A");
-			estudiant3.obtenirDades();
 			estudiant3.posarNota(8);
 			estudiant3.posarNota(9.5);
 			estudiant3.posarNota(7.7);
 			estudiant3.posarNota(4);
 			ins.afegirPersona(estudiant3);
 			//ins.afegirEstudiant(estudiant1);
-			ins.afegirPersona(estudiant3);
 
 			ins.imprimirInformacio();
 		}catch(Exception e) {
 			System.out.println(e.getMessage());
 		}
+		/*
+		Scanner input = new Scanner(System.in);
+		System.out.print("Introdueix el número de l’acció que vulguis fer:\n");
+		int numero = input.nextInt();
+		System.out.print("1) Veure la llista d’Instituts\n" +
+				"2) Veure la informació completa d’un Institut\n" +
+				"3) Afegir persona a un Institut\n" +
+				"4) Eliminar un Institut\n" +
+				"5) Crear un Institut\n");
 
+
+
+		switch (numero){
+			case 1:
+				//instutut.imprimirInformacio();
+				break;
+			case 2:
+				System.out.println("Escriu el número de l’Institut que vols consultar\n");
+				Scanner input2 = new Scanner(System.in);
+				break;
+			case 3:
+				break;
+			case 4:
+				break;
+			case 5:
+				System.out.println("Escriu el nom de l’Institut que vols crear:\n");
+				Scanner institut = new Scanner(System.in);
+				Institut institut1 = new Institut();
+				institut1.canviarNom(institut.toString());
+				System.out.println("Institut creat correctament");
+				break;
+		}
+		*/
 	}
 }
 

@@ -15,8 +15,11 @@ public class Persona {
     }
 
     public void assignarDni(String dni) throws Exception {
-        if(this.dni != dni){
+        if(this.dni == null){
             this.dni=dni;
+        }
+        else {
+            throw new Exception("La Persona ya te DNI");
         }
     }
 

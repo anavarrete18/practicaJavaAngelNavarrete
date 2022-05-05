@@ -6,9 +6,6 @@ import java.util.List;
 public class Estudiant extends Persona{
     //private double nota;
     List<Double> notes = new ArrayList<>();
-    private double notaMaxima = 0;
-    private double notaMinima;
-    private double mitjanaNotes = 0;
 
     public void posarNota(double nota) throws Exception {
             if( nota > 10 || nota < 0 ){
@@ -19,30 +16,41 @@ public class Estudiant extends Persona{
             }
     }
 
+    public double obtenirNotaMaxima(){
+        double notaMaxima = 0;
+        for (Double nota : notes) {
+            if (nota > notaMaxima) {
+                notaMaxima = nota;
+            }
+        }
+        return notaMaxima;
+    }
+    public double obtenirNotaMinima(){
+        double notaMinima = this.obtenirNotaMaxima();
+        for (Double nota : notes) {
+            if (nota < notaMinima) {
+                notaMinima = nota;
+            }
+        }
+        return notaMinima;
+    }
+    public double obtenirMitjana(){
+        double mitjanaNotes;
+        double sumatori = 0;
+        for (Double nota : notes) {
+            sumatori += nota;
+        }
+        mitjanaNotes = sumatori / notes.size();
+        return mitjanaNotes;
+    }
+
     @Override
     public void obtenirDades() throws Exception {
             if(nom == null || dni == null){
                 throw new Exception("No hi ha dades sobre la Persona");
             }
             else{
-                for (int i = 0; i < notes.size(); i++) {
-                    if (notes.get(i) > notaMaxima) {
-                        notaMaxima = notes.get(i);
-                    }
-                }
-                notaMinima = notaMaxima;
-                for (int i = 0; i < notes.size(); i++) {
-                    if (notes.get(i) < notaMinima) {
-                        notaMinima = notes.get(i);
-                    }
-                }
-                double sumatori = 0;
-                for (int i = 0; i < notes.size(); i++) {
-                    sumatori += notes.get(i);;
-                }
-                mitjanaNotes = sumatori / notes.size();
-
-                System.out.println("PERSONA amb nom: "+ nom + " i dni: " + dni + " (ESTUDIANT amb nota máxima: " + notaMaxima + ", nota minima de: " + notaMinima +" i mitjana de: " + mitjanaNotes + ")");
+                System.out.println("PERSONA amb nom: " + nom + " i dni: " + dni + " (ESTUDIANT amb nota máxima: " + this.obtenirNotaMaxima() + ", nota minima de: " + this.obtenirNotaMinima() +" i mitjana de: " + this.obtenirMitjana() + ")");
             }
     }
 }
